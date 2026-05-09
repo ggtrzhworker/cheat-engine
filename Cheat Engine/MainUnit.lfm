@@ -117,7 +117,9 @@ object MainForm: TMainForm
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       Caption = 'No Process Selected'
+      Hint = 'Select a target process before scanning'
       ParentColor = False
+      ShowHint = True
       WordWrap = True
       OnDblClick = ProcessLabelDblClick
       OnMouseDown = ProcessLabelMouseDown
@@ -128,7 +130,7 @@ object MainForm: TMainForm
       AnchorSideTop.Control = Label6
       Left = 39
       Height = 15
-      Hint = 'This shows the amount of addresses found'
+      Hint = 'Current number of scan results'
       Top = 31
       Width = 6
       BorderSpacing.Left = 2
@@ -249,7 +251,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrBottom
       Left = 337
       Height = 28
-      Hint = 'Copy all selected items to the address list'
+      Hint = 'Add the selected scan results to the address list'
       Top = 369
       Width = 28
       Anchors = [akLeft, akBottom]
@@ -272,7 +274,7 @@ object MainForm: TMainForm
       Caption = 'First Scan'
       Constraints.MinWidth = 82
       Enabled = False
-      Hint = 'Start a new scan using the current value, scan type, and value type'
+      Hint = 'Select a process and enter a value before starting the first scan'
       OnClick = btnNewScanClick
       ParentShowHint = False
       ShowHint = True
@@ -628,7 +630,7 @@ object MainForm: TMainForm
       Caption = 'Next Scan'
       Constraints.MinWidth = 82
       Enabled = False
-      Hint = 'Filter the current results with the current scan settings'
+      Hint = 'After the first scan, filter the current results with these settings'
       OnClick = btnNextScanClick
       ShowHint = True
       TabOrder = 1
@@ -714,7 +716,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = LogoPanel
       Left = 101
       Height = 16
-      Hint = 'This shows how far Cheat Engine is with searching'
+      Hint = 'Scan progress'
       Top = 15
       Width = 581
       Anchors = [akTop, akLeft, akRight]
@@ -1665,7 +1667,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = btnMemoryView
       Left = 0
       Height = 351
-      Hint = 'Scan results. Double-click a result to add it to the address list'
+      Hint = 'Scan results. Double-click a result or use the add button to add it to the address list'
       Top = 46
       Width = 337
       Anchors = [akTop, akLeft, akRight, akBottom]
