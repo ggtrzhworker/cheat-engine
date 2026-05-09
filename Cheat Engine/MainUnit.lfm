@@ -270,7 +270,7 @@ object MainForm: TMainForm
       Width = 76
       AutoSize = True
       Caption = 'First Scan'
-      Constraints.MinWidth = 75
+      Constraints.MinWidth = 82
       Enabled = False
       Hint = 'Start a new scan using the current value, scan type, and value type'
       OnClick = btnNewScanClick
@@ -293,7 +293,7 @@ object MainForm: TMainForm
       BorderSpacing.Left = 6
       BorderSpacing.Top = 6
       BorderSpacing.Right = 6
-      Caption = 'Memory Scan Options'
+      Caption = 'Scan Range and Memory Options'
       ClientHeight = 167
       ClientWidth = 196
       Constraints.MinWidth = 10
@@ -322,7 +322,7 @@ object MainForm: TMainForm
           AnchorSideTop.Side = asrBottom
           Left = 2
           Height = 19
-          Hint = 'Unchecked:'#13#10'Do not scan copy-on-write memory'#13#10#13#10'Checked:'#13#10'Only scan copy-on-write memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s copy-on-write or not'
+          Hint = 'Filter copy-on-write memory: checked only, unchecked exclude, gray any'
           Top = 19
           Width = 92
           AllowGrayed = True
@@ -338,7 +338,7 @@ object MainForm: TMainForm
           AnchorSideTop.Control = Panel2
           Left = 2
           Height = 19
-          Hint = 'Unchecked:'#13#10'Do not scan writable memory'#13#10#13#10'Checked:'#13#10'Only scan writable memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s writable memory or not'
+          Hint = 'Filter writable memory: checked only, unchecked exclude, gray any'
           Top = 0
           Width = 64
           AllowGrayed = True
@@ -360,7 +360,7 @@ object MainForm: TMainForm
           AnchorSideRight.Side = asrBottom
           Left = 117
           Height = 19
-          Hint = 'Unchecked:'#13#10'Do not scan executable memory'#13#10#13#10'Checked:'#13#10'Only scan executable memory'#13#10#13#10'Gray:'#13#10'Don''t care if it''s executable or not'
+          Hint = 'Filter executable memory: checked only, unchecked exclude, gray any'
           Top = 0
           Width = 77
           AllowGrayed = True
@@ -427,6 +427,8 @@ object MainForm: TMainForm
           Alignment = taRightJustify
           Anchors = [akTop, akLeft, akRight]
           BorderSpacing.Top = 2
+          Hint = 'End address for the scan range'
+          ShowHint = True
           TabOrder = 1
           Text = 'ffffffff'
         end
@@ -444,6 +446,8 @@ object MainForm: TMainForm
           Anchors = [akTop, akLeft, akRight]
           BorderSpacing.Left = 6
           BorderSpacing.Right = 6
+          Hint = 'Start address for the scan range'
+          ShowHint = True
           TabOrder = 0
           Text = '00000000'
         end
@@ -470,7 +474,7 @@ object MainForm: TMainForm
           AnchorSideTop.Side = asrCenter
           Left = 2
           Height = 19
-          Hint = 'Speeds up the scan and decreases useless results by skipping unaligned memory, or only scans addresses ending with specific digits'
+          Hint = 'Skip unaligned addresses or scan only addresses ending with specific digits'
           Top = 29
           Width = 69
           BorderSpacing.Left = 2
@@ -497,7 +501,9 @@ object MainForm: TMainForm
           BorderSpacing.Top = 8
           Constraints.MinWidth = 10
           Enabled = False
+          Hint = 'Alignment value or last digits used by Fast Scan'
           OnKeyPress = edtAlignmentKeyPress
+          ShowHint = True
           TabOrder = 1
           Text = '4'
         end
@@ -620,7 +626,7 @@ object MainForm: TMainForm
       AutoSize = True
       BorderSpacing.Left = 10
       Caption = 'Next Scan'
-      Constraints.MinWidth = 75
+      Constraints.MinWidth = 82
       Enabled = False
       Hint = 'Filter the current results with the current scan settings'
       OnClick = btnNextScanClick
