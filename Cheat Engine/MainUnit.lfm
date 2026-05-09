@@ -272,8 +272,10 @@ object MainForm: TMainForm
       Caption = 'First Scan'
       Constraints.MinWidth = 75
       Enabled = False
+      Hint = 'Start a new scan using the current value, scan type, and value type'
       OnClick = btnNewScanClick
       ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
     end
     object gbScanOptions: TGroupBox
@@ -620,7 +622,9 @@ object MainForm: TMainForm
       Caption = 'Next Scan'
       Constraints.MinWidth = 75
       Enabled = False
+      Hint = 'Filter the current results with the current scan settings'
       OnClick = btnNextScanClick
+      ShowHint = True
       TabOrder = 1
     end
     object ScanType: TComboBox
@@ -638,6 +642,7 @@ object MainForm: TMainForm
       BorderSpacing.Bottom = 2
       DropDownCount = 9
       Enabled = False
+      Hint = 'Choose how the entered value should be compared during the scan'
       ItemHeight = 15
       ItemIndex = 0
       Items.Strings = (
@@ -652,6 +657,7 @@ object MainForm: TMainForm
         'Unknown initial value'
       )
       OnChange = ScanTypeChange
+      ShowHint = True
       Style = csDropDownList
       TabOrder = 6
       Text = 'Exact value'
@@ -670,6 +676,7 @@ object MainForm: TMainForm
       BorderSpacing.Right = 6
       DropDownCount = 11
       Enabled = False
+      Hint = 'Choose the data type to scan for'
       ItemHeight = 15
       ItemIndex = 0
       Items.Strings = (
@@ -688,6 +695,7 @@ object MainForm: TMainForm
       OnChange = VarTypeChange
       OnDropDown = VarTypeDropDown
       PopupMenu = pmValueType
+      ShowHint = True
       Style = csDropDownList
       TabOrder = 7
       Text = 'Binary'
@@ -724,7 +732,9 @@ object MainForm: TMainForm
       BorderSpacing.Right = 5
       Caption = 'Undo Scan'
       Enabled = False
+      Hint = 'Restore the previous scan result set'
       OnClick = UndoScanClick
+      ShowHint = True
       TabOrder = 3
     end
     object scanvalue: TEdit
@@ -739,8 +749,10 @@ object MainForm: TMainForm
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Right = 5
       Enabled = False
+      Hint = 'Enter the value to search for'
       OnKeyPress = ScanvalueoldKeyPress
       PopupMenu = ccpmenu
+      ShowHint = True
       TabOrder = 4
     end
     object Panel7: TPanel
@@ -759,7 +771,7 @@ object MainForm: TMainForm
       object sbOpenProcess: TSpeedButton
         Left = 3
         Height = 30
-        Hint = 'Select a process to open'
+        Hint = 'Select the target process before scanning'
         Top = 3
         Width = 30
         BorderSpacing.Around = 3
@@ -1610,8 +1622,10 @@ object MainForm: TMainForm
       BorderSpacing.Left = 5
       BorderSpacing.Right = 5
       Enabled = False
+      Hint = 'Enter the second value for range-based scans'
       OnKeyPress = ScanvalueoldKeyPress
       PopupMenu = ccpmenu
+      ShowHint = True
       TabOrder = 5
     end
     object ScanText2: TLabel
@@ -1621,7 +1635,7 @@ object MainForm: TMainForm
       Height = 15
       Top = 79
       Width = 56
-      Caption = 'Scan Value'
+      Caption = 'Second Value'
       Enabled = False
       ParentBidiMode = False
       ParentColor = False
@@ -1645,7 +1659,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = btnMemoryView
       Left = 0
       Height = 351
-      Hint = 'This list shows all the found addresses that matched your last scan'
+      Hint = 'Scan results. Double-click a result to add it to the address list'
       Top = 46
       Width = 337
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -1710,7 +1724,9 @@ object MainForm: TMainForm
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 5
       Caption = 'Memory View'
+      Hint = 'Open the memory viewer for advanced inspection'
       OnClick = btnMemoryViewClick
+      ShowHint = True
       TabOrder = 17
     end
     object cbCompareToSavedScan: TCheckBox
@@ -2256,6 +2272,7 @@ object MainForm: TMainForm
     end
     object actMemoryView: TAction
       Caption = 'actMemoryView'
+      Hint = 'Open the memory viewer'
       OnExecute = btnMemoryViewClick
       ShortCut = 16461
     end
