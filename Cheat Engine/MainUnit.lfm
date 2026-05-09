@@ -296,7 +296,7 @@ object MainForm: TMainForm
       Caption = 'Scan Range and Memory Options'
       ClientHeight = 167
       ClientWidth = 196
-      Constraints.MinWidth = 10
+      Constraints.MinWidth = 220
       Enabled = False
       TabOrder = 2
       OnChangeBounds = gbScanOptionsChangeBounds
@@ -1710,13 +1710,16 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Panel5
       AnchorSideBottom.Side = asrBottom
       Left = 589
-      Height = 18
+      Height = 24
       Top = 402
       Width = 145
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 5
       Caption = 'Add Address Manually'
+      Constraints.MinHeight = 24
+      Hint = 'Manually add an address to the address list'
       OnClick = btnAddAddressManuallyClick
+      ShowHint = True
       TabOrder = 16
     end
     object btnMemoryView: TButton
@@ -1724,12 +1727,13 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Panel5
       AnchorSideBottom.Side = asrBottom
       Left = 0
-      Height = 18
+      Height = 24
       Top = 402
       Width = 98
       Anchors = [akLeft, akBottom]
       BorderSpacing.Bottom = 5
       Caption = 'Memory View'
+      Constraints.MinHeight = 24
       Hint = 'Open the memory viewer for advanced inspection'
       OnClick = btnMemoryViewClick
       ShowHint = True
