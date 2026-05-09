@@ -192,6 +192,7 @@ object MainForm: TMainForm
       Width = 30
       Action = actOpen
       BorderSpacing.Top = 3
+      Hint = 'Open a cheat table or trainer file'
       Images = mfImageList
       ImageIndex = 3
       ImageWidth = 23
@@ -208,6 +209,7 @@ object MainForm: TMainForm
       Top = 3
       Width = 30
       Action = actSave
+      Hint = 'Save the current table'
       Images = mfImageList
       ImageIndex = 4
       ImageWidth = 23
@@ -774,8 +776,10 @@ object MainForm: TMainForm
       ClientHeight = 36
       ClientWidth = 36
       Color = clRed
+      Hint = 'Select a process before scanning'
       ParentColor = False
       ParentFont = False
+      ShowHint = True
       TabOrder = 10
       object sbOpenProcess: TSpeedButton
         Left = 3
@@ -1175,7 +1179,9 @@ object MainForm: TMainForm
         AutoSize = True
         Caption = 'Settings'
         Flat = True
+        Hint = 'Open settings'
         OnClick = SettingsClick
+        ShowHint = True
       end
     end
     object pnlScanValueOptions: TPanel
