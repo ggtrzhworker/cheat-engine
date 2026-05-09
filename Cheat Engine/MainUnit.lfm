@@ -30,7 +30,7 @@ object MainForm: TMainForm
     Width = 734
     Align = alTop
     AutoSnap = False
-    Beveled = True
+    Beveled = False
     MinSize = 50
     OnMoved = Splitter1Moved
     ResizeAnchor = akTop
@@ -43,7 +43,7 @@ object MainForm: TMainForm
     Width = 734
     Align = alClient
     BevelOuter = bvNone
-    BorderWidth = 1
+    BorderWidth = 2
     FullRepaint = False
     PopupMenu = PopupMenu2
     TabOrder = 0
@@ -55,6 +55,7 @@ object MainForm: TMainForm
     Width = 734
     Align = alBottom
     AutoSize = True
+    BevelOuter = bvNone
     ClientHeight = 32
     ClientWidth = 734
     TabOrder = 1
