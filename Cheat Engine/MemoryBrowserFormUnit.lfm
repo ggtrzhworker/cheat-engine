@@ -25,7 +25,7 @@ object MemoryBrowser: TMemoryBrowser
     Width = 801
     Align = alTop
     AutoSnap = False
-    Beveled = True
+    Beveled = False
     Color = clBtnFace
     OnCanResize = Splitter1CanResize
     OnMoved = Splitter1Moved
@@ -694,7 +694,7 @@ object MemoryBrowser: TMemoryBrowser
     Width = 801
     Align = alClient
     BevelOuter = bvNone
-    BorderWidth = 1
+    BorderWidth = 2
     ClientHeight = 141
     ClientWidth = 801
     Hint = 'Memory view and stack area'
